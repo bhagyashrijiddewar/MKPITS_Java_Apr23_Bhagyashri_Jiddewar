@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>form-1</title>
+      <style>
+         table{
+            padding: 50px;
+            border: 1px solid black;
+            width:50%;
+            font-size: medium;
+            padding-bottom: 15px;
+         }
+        input, textarea,select{
+            border: 1px solid red;
+            padding: 5px;
+         }
+         h1{
+            text-align: center;
+            color:crimson;
+         }
+         tr{
+            padding: 50px;
+         }
+         button{
+            background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+            
+         }
+         
+      </style>
+    </head>
+    <body>
+         <form>
+            <table align="center">
+                <tbody>
+                <tr>
+                    <td>
+                    <h1>Student Registration Form</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <label for="f-name"> First Name :</label>
+                    <input type="text" id="f-name" maxlength="100"  placeholder="Enter first name">
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="f-name"> Last Name :</label>
+                       <input type="text" id="f-name" placeholder="Enter last name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="rdbtn">Gender :</label>
+                        <input type="radio" id="rdbtn" name="gen">Male &nbsp;
+                        <input type="radio" id="rdbtn" name="gen">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="age">Age :</label>
+                        <input type="number" id="age" placeholder="Enter your age">
+                      
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="birth">Date of Birth :</label>
+                        <input type="date" id="birth">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email :</label>
+                        <input type="email" id="email"  placeholder="Enter your email id">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pass">Password :</label>
+                        <input type="password" id="pass"  placeholder="Enter your password min 8 charecters">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="cpass">Confirm Password :</label>
+                        <input type="password" id="cpass" placeholder="Confirm password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone">Phone Number :</label>
+                        <select name="countryCode" id="" >
+                            <option data-countryCode="IND" value="91" Selected> +91</option>
+                            <option data-countryCode="US" value="1"> +44</option>
+                        </select>
+                        <input type="tel" id="phone" placeholder="Enter your phone number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="add">Address :</label>
+                        <textarea id="add" placeholder="Enter your address"> </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="sta">State :</label>
+                        <select name="state" id="sta">--select your state--
+                            <option value="MH">Maharashtra</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="HIM">Himachal Pradesh</option>
+                            <option value="CHI">Chattisgarh</option>
+                        </select>
+                    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pin">Pincode :</label>
+                        <input type="text" id="pin" placeholder="Enter your pin code">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="hob">Hobbies :</label>
+                        <input type="checkbox" id="hob">Music &nbsp;&nbsp;
+                        <input type="checkbox" id="hob">Movie &nbsp;&nbsp;
+                        <input type="checkbox" id="hob">Sport  &nbsp;&nbsp;
+                        <input type="checkbox" id="hob">Travel
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="photo">Upload Photo :</label>
+                        <input type="file" id="photo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">I hearby declare that the above information provided is true and correct.  &nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>Register</button>  &nbsp;&nbsp;
+                        <button>Reset</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form> 
+    </body>
+</html>

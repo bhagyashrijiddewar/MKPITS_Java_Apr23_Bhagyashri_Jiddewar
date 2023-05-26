@@ -1,0 +1,27 @@
+<html>
+<body>
+<fieldset>
+<legend> Personal Details </legend>
+<form>
+<label for="fname">First Name :</label>
+<input type="text" id="fname"> &nbsp&nbsp
+<label for="lname">Last Name :</label>
+<input type="text" id="lname"><hr>
+<label for="gen">Gender :</label>
+<input type="gender" id="gen"> &nbsp&nbsp
+<label for="dob">Date of birth :</label>
+<input type="date" id="dob">
+</form>
+</fieldset>
+<fieldset>
+<legend> Educational Details </legend>
+<label for="grad">Graduation :</label>
+<select id="grad">--select--
+<option value="BE">Bachelor of Engineering</option>
+<option value="BA">Bachelor of Arts </option>
+</select>
+</fieldset>
+</body>
+</html>
+
+

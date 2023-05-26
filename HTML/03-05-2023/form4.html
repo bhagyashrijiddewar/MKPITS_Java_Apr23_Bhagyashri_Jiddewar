@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>form-4</title>
+     
+      <style>
+        table{
+            border: 1px dotted black;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 50px;
+           margin-bottom: 50px;
+           border-radius: 5px;
+           background: linear-gradient(0deg,  #c53285b3,#3221edaf);
+        }
+        h2{
+            text-align: center;
+            color: rgb(37, 80, 234);
+        }
+        input[type="submit"]{
+            width: 100px;
+            font-size: 20px;
+        }
+        input[type="reset"]{
+            width: 100px;
+            font-size: 20px;
+        }
+
+      </style>
+    </head>
+    <body>
+        <form>
+            <table cellpadding="10" cellspacing="2">
+                  <a href="#"><h2>Student Registration form using table in HTML</h2></a>
+                <tr>
+                    <td>
+                      <label for="fname">First Name </label>
+                    </td>
+                    <td>
+                        <input type="text" id="fname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <label for="lname">Last Name </label>
+                    </td>
+                    <td>
+                        <input type="text" id="lname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <label for="mail"> Email </label>
+                    </td>
+                    <td>
+                        <input type="email" id="mail">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <label for="mob">Mobile Number </label>
+                    </td>
+                    <td>
+                        <input type="tel" id="mob">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gen">Gender </label></td>
+                        <td>
+                            <input type="radio" id="gen" name="gender">Male &nbsp;&nbsp;&nbsp;
+                            <input type="radio" id="gen" name="gender">Female &nbsp;&nbsp;&nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <label for="dob">DOB </label>
+                    </td>
+                    <td>
+                        <input type="date" id="dob">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="add">Address :</label></td>
+                      <td>  <textarea id="add" placeholder="Enter your address"> </textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <label for="c">City </label>
+                    </td>
+                    <td>
+                        <input type="text" id="c">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <label for="pin">Pin Code </label>
+                    </td>
+                    <td>
+                        <input type="text" id="pin">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <label for="st">State </label>
+                    </td>
+                    <td>
+                        <input type="text" id="st">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <label for="con">Country </label>
+                    </td>
+                    <td>
+                        <input type="text" id="con">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="hob">Hobbies </label></td>
+                      <td>  
+                        <input type="checkbox" id="hob">Drawing &nbsp;
+                        <input type="checkbox" id="hob">Singing &nbsp;
+                        <input type="checkbox" id="hob">Dancing  &nbsp;
+                        <input type="checkbox" id="hob">Sketching &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  &nbsp;&nbsp;  
+                        <input type="checkbox" id="hob">Others   &nbsp;&nbsp;  
+                        <input type="text" id="hob" placeholder="Ex-Teaching">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="Qua">Qualification </label></td>
+                      <td>  
+                        <input type="checkbox" id="Qua">High School(10th) <br>
+                        <input type="checkbox" id="Qua">Higher School(12th) <br>
+                        <input type="checkbox" id="Qua">Graduation(Bachalors)  <br>
+                        <input type="checkbox" id="Qua">Post Graduation(Master)<br>   
+                        <input type="checkbox" id="Qua">Phd     
+                      
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="co">Course Applied For </label></td>
+                      <td>  
+                        <input type="checkbox" id="co">BCA(Bachelors of Computer Application) <br>
+                        <input type="checkbox" id="co">B.COM(Bachelors of commerce) <br>
+                        <input type="checkbox" id="co">BSC(Bachelors of Science)  <br>
+                        <input type="checkbox" id="co">BA(Bachelors of Arts)<br>   
+                        <input type="checkbox" id="co">MCA(MAster of computer Application)     <br>
+                        <input type="checkbox" id="co">M.COM(Master of commerce)<br>
+                        <input type="checkbox" id="co">MSC(MAster of science)<br>
+                        <input type="checkbox" id="co">MA(Master of Arts)
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                       <input  type="submit">&nbsp;&nbsp;
+                       <input type="reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

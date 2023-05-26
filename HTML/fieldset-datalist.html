@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>form-4</title>
+    </head>
+    <body>
+        <form>
+            <table cellspacing="10" cellpadding="5">
+                <tr>
+                    <td>
+                        <!-- fieldset -->
+                        <fieldset>
+                            <legend>Personal Details </legend>
+                            <label for="fname">First Name :</label>
+                            <input type="text" id="fname">
+                            <label for="fname">First Name :</label>
+                            <input type="text" id="fname">
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- datalist -->
+                        <input list="abc" placeholder="enter country name">
+                        <datalist id="abc">
+                          <option value="IND">India</option>
+                          <option value="US">United State</option>
+                          <option value="ENG">England</option>
+                          <option value="USA">United State of America</option>
+                        </datalist>
+                        <!-- when click on the button ? display in address bar -->
+                        <input type="submit">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                         <!--------- output-------->
+                         <!-- <form oninput="x.value= parseInt(a.value)+parseInt(b.value);">0
+                            <input type="range" id="a" value="100">
+                           
+                            +100<input type="number" id="b" value="" placeholder="Enter number">
+                            =<output name="x" for="a b"></output><br>
+                        </form> -->
+                        <!-- <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                            <input type="range" id="a" value="50">
+                            +<input type="number" id="b" value="25">
+                            =<output name="x" for="a b"></output>
+                        </form> -->
+                        <form oninput="sumresult.value = parseInt(A.value)
+                         + parseInt(B.value) + parseInt(C.value)">
+                        <input type="number" name="A" value="50" /> +
+                        <input type="range" name="B" value="0" /> +
+                        <input type="number" name="C" value="50" /><br>
+                        <br /> Submit Result:
+                      <!-- output tag --><br>
+                        <output name="sumresult" for="A B C"></output>
+                        <br>
+                        <input type="submit">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
