@@ -1,0 +1,18 @@
+h2{
+    /* justify-content: ;
+    text-align: ;
+    text-align-last: ;
+    text-decoration: ;
+    text-decoration: ;
+    /* image /audio/video 
+    values: baseline, text-top, test-bottom,sub,super
+    10*10px / 15*15px image
+    */
+    /* vertical-align: ; */ 
+
+    text-shadow: 2px 2px 8px #FF0000;
+}
+.h2{
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+
+}
