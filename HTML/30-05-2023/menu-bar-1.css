@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul{
+    background: rgb(212, 181, 242);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+li{
+    
+    display: inline-block;
+    padding: 20px;
+    /* margin-bottom: 20px; */
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+img{
+    height:60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 500px;
+    
+}
+a{
+    text-decoration: none;
+    height: 80px;
+
+}
+
+   
