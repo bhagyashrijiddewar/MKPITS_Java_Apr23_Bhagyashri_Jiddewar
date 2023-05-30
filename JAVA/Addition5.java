@@ -1,9 +1,9 @@
 
 
 
-class Addition{
+class Addition5{
 
-  public int additionInteger(int number1,int number2)
+  public byte additionbyte(byte number1,byte number2)
   {
     return number1 + number2 ;
   }
@@ -11,8 +11,8 @@ class Addition{
   
   public static void main(String[] args){
       int sum;
-      Addition addition1=new Addition();
-	  sum= addition1.additionInteger(10,15);
+      Addition5 addition=new Addition5();
+	  sum= addition.additionbyte(1,2);
 	  System.out.println("Addition of 2-numbers:" +sum);
   }
   
