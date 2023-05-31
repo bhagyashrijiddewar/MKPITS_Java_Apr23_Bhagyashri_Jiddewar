@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul{
+    background: rgb(212, 181, 242);
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    overflow: auto;
+}
+li, p .img1{
+    padding-top: 30px;
+
+}
+li a{
+    
+    display: block;
+    padding: 20px;
+    font-size: 30px;
+    height: 50px;
+    text-decoration: none;
+}
+li a:hover{
+    text-decoration: underline;
+    color: red;
+    background-color: aliceblue;
+}
+.active{
+    text-decoration: underline;
+    color: red;}
+
+.img{
+    
+    height:60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 30px;
+}
+p{
+    font-size: larger;
+    line-height: 30px;
+   
+}
+.div{
+    margin-left: 230px;
+     padding-top: 30px;
+}
+.img1{
+    height: 200px;
+    width: 300px;
+    float: left;
+    margin-right: 10px;
+}
+
+
+   

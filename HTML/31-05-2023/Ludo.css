@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.outer{
+    width: 800px;
+    height:800px;
+    border: 5px solid black;
+    margin: auto;
+    margin-top: 8px;
+    background: gray;
+    margin-bottom: 8px;
+}
+.row1{
+    width: auto;
+    height: 300px;
+    /* display: ; */
+}
+#inner-row1-col1{
+    width: 300px;
+    height: 300px;
+    background: green;
+}
+#inner-row1-col2{
+    width: 200px;
+    height: 300px;
+    background:white;
+}
+#inner-row1-col3{
+    width: 300px;
+    height: 300px;
+    background:red;
+}
+.row2{
+    width: auto;
+    height: 200px;
+}
+.row3{
+    width: auto;
+    height: 300px;
+}
