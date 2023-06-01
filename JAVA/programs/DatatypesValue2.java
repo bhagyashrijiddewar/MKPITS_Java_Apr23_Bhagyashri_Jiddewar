@@ -1,6 +1,6 @@
 class DatatypesValue2{
   
-static short sh,shortValue;
+  short sh,shortValue;
 
 public static void main(String[] args){
 	
