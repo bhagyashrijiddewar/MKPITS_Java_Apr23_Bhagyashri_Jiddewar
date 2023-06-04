@@ -11,9 +11,9 @@ public float additionFloat(float number3,float number4){
    return number3 + number4 ;
 } 
 
-public short additionShort(short number1,short number2){
+public short additionShort(short number9,short number10){
    
-   return  (short)(number1 + number2) ;
+   return  (short)(number9 + number10) ;
 } 
 
 public double additionDouble(double number5,double number6){
