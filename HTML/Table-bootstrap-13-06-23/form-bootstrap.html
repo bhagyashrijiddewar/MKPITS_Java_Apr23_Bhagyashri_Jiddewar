@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <form>
+        <table class="table">
+            <h2>Student Registration Form</h2>
+            <tr>
+            
+                <td>
+                    <label for="fname">First Name :</label>
+                </td>
+                <td class="input">
+                    <input type="text" id="fname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mname">Middle Name :</label>
+                </td>
+                <td class="input">
+                    <input type="text" id="mname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lname">Last Name :</label>
+                </td>
+                <td>
+                    <input type="text" id="lname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="mail"> Email :</label>
+                </td>
+                <td>
+                    <input type="email" id="mail">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pass">Password :</label>
+                </td>
+                <td> <input type="password" id="pass">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="phone">Phone Number :</label>
+                </td>
+                <td>
+                    <select name="contact" id="phone">--select--
+                        <option value="ind">+91</option>
+                        <option value="US">+012</option>
+                        <option value="ENG">+86</option>
+                    </select>&nbsp;&nbsp;
+                    <input type="tel">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="gen">Gender :</label>
+                </td>
+                <td>
+                    <input type="radio" id="gen" name="gender"> Male
+                    <input type="radio" id="gen" name="gender"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="hob">Hobbies :</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="hob"> Cooking <br>
+                    <input type="checkbox" id="hob"> Reading <br>
+                    <input type="checkbox" id="hob"> Drawing <br>
+                    <input type="checkbox" id="hob"> Swimming
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="dob">Date of Birth :</label>
+                </td>
+                <td>
+                    <input type="date" id="dob">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="week"> week :</label>
+                </td>
+                <td>
+                    <input type="week" name="week" id="week">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="datetime"> Datetime-local :</label>
+                </td>
+                <td>
+                    <input type="datetime-local" name="datetime" id="datetime">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="month"> Month:</label>
+                </td>
+                <td>
+                    <input type="month" name="month" id="month">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="time">Select Time :</label>
+                </td>
+                <td>
+                    <input type="time" name="time" id="time">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Hidden Value :</label>
+                </td>
+                <td>
+                    <input type="hidden" name="number" id="number" value="9890642100">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="num">Number :</label>
+                </td>
+                <td>
+                    <input type="number" name="num" id="num" min="0" max="9">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fname">Image :</label>
+                </td>
+                <td>
+                    <input type="Image" src="/image/butterfly.jpg" width="100px" height="100px">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="edu">Education :</label>
+                </td>
+                <td>
+                    <select name="education" id="edu">--select--
+                        <option value="BE">BE</option>
+                        <option value="BTch">BTch</option>
+                        <option value="BA">Bachelor of Arts</option>
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="yop">Year of Passing :</label>
+                </td>
+                <td>
+                    <input type="text" id="yop">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="colour">Select Color :</label>
+                </td>
+                <td>
+                    <input type="color" name="colour" id="colour">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="photo">Upload Photo :</label>
+                </td>
+                <td>
+                    <input type="file" id="photo">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="range">Range :</label>
+                </td>
+                <td>
+                    <input type="range" id="range">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Search">Search :</label>
+                </td>
+                <td>
+                    <input type="search" id="Search">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Button">
+                </td>
+            </tr>
+
+
+        </table>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>   
+</body>
+
+</html>
