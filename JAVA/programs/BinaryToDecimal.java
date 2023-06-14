@@ -2,7 +2,7 @@ class BinaryToDecimal{
 
 public long toDecimal(long binary){
  int decimalNumber = 0;
- long remainder, i = 1, step = 1;
+ long remainder, i = 1;
  
     while (binary != 0) {
       remainder = binary % 10;
