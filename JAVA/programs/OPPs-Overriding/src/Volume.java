@@ -1,6 +1,6 @@
 public class Volume {
-    public void volume(double radius) {
-
+    public double volume(double radius) {
+        return radius;
     }
 
 }

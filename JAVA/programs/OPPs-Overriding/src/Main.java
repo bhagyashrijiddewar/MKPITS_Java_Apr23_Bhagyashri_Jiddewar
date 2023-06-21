@@ -31,12 +31,22 @@ public class Main {
         System.out.println("Total Salary of Tester = "+totalSalaryTester);
 
 
-        //-------------Volume class override volumeofSphere class-------------
+        //-------------volumeofSphere class override Volume  class-------------
 
         System.out.println("-----(Example-5)-----Volume of Sphere--------");
         VolumeOfSphere volumeResult=new VolumeOfSphere();
         double Result=volumeResult.volume(4.6);
         System.out.println("Volume of Sphere = "+Result);
 
+        //-------------perimeterOfReactangle class override Perimeter  class-------------
+
+        System.out.println("-----(Example-6)-----perimeter Of Reactangle--------");
+        PerimeterOfRectangle perimeterResult=new PerimeterOfRectangle();
+        double perrimeterOfRectangleResult= perimeterResult.perimeter(2.3,3.5);
+        System.out.println("perimeter Of Reactangle :"+perrimeterOfRectangleResult);
+
+        //-------------Child class override Parant class -------------
+
+        System.out.println("-----(Example-7)-----perimeter Of Reactangle--------");
     }
 }
