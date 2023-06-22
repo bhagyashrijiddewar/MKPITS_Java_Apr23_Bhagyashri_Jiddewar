@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-Operator</title>
+</head>
+<body>
+<h1>------------------------Assignment Operator---------------------</h1>
+    <h2>simple assignment operator :</h2>
+    <h3 id="head"></h3>
+
+    <h1>+= assignment operator : </h1>
+    <h3 id="head1"></h3>
+
+    <h1> -= assignment operator : </h1>
+    <h3 id="head2"></h3>
+
+    <h1> *= assignment operator : </h1>
+    <h3 id="head3"></h3>
+
+    <h1> /= assignment operator : </h1>
+    <h3 id="head4"></h3>
+
+    <h1> %= assignment operator : </h1>
+    <h3 id="head5"></h3>
+
+    <h1> **= assignment operator : </h1>
+    <h3 id="head6"></h3>
+
+    <h1> = assignment operator : </h1>
+    <h3 id="head7"></h3>
+
+
+    <script>
+        // --------Simple assignment operator-------------------
+        
+        let y = 50
+        let x = 10 + y;
+        document.getElementById("head").innerHTML = "Value of num1 is (50+10): " + x;
+
+          // --------+= assignment operator-------------------
+          
+        let num2 = 30
+        num2 += 10;
+        document.getElementById("head1").innerHTML = "Value of num2 is (30+10): " + num2;
+         // --------  -= assignment operator-------------------
+          
+         let num3 = 30
+        num3 -= 10;
+        document.getElementById("head2").innerHTML = "Value of num3 is (30-10): " + num3;
+         // --------*= assignment operator-------------------
+          
+         let num4 = 30
+        num4 *= 10;
+        document.getElementById("head3").innerHTML = "Value of num4 is (30*10) :" + num4;
+         // --------/= assignment operator-------------------
+          
+         let num5 = 30
+        num5 /= 10;
+        document.getElementById("head4").innerHTML = "Value of num5 is (30/10) :" + num5;
+           // --------%= assignment operator-------------------
+          
+           let num6 = 30
+        num6 %= 10;
+        document.getElementById("head5").innerHTML = "Value of num6 is (30%10) :" + num6;
+           // --------**= assignment operator-------------------
+          
+           let num7 = 30
+           num7 **= 10;
+        document.getElementById("head6").innerHTML = "Value of num7 is (30 rest to the power 10)(30**10) : " + num7;
+
+         // --------**= assignment operator-------------------
+          
+         let num8 = 30
+        document.getElementById("head7").innerHTML = "Value of num8 is (30=) : " + num8;
+
+
+    </script>
+</body>
+</html>
