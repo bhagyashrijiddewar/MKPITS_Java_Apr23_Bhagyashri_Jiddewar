@@ -1,28 +1,33 @@
 public class CalculateService {
-    double response;
+   // double response;
     public double calculate(String operator, double operand1, double operand2) {
         switch (operator) {
             case "+":
-                CalculateAddition addition = new CalculateAddition();
-                response = addition.getCalculateValue(operand1, operand2);
-                break;
+                CalculateAddition calculateAddition = new CalculateAddition();
+                double addition = calculateAddition.getCalculateValue(operand1, operand2);
+                return addition;
+
             case "-":
                 CalculateSubstraction substract = new CalculateSubstraction();
-                response = substract.getCalculateValue(operand1, operand2);
-                break;
+                double substraction = substract.getCalculateValue(operand1, operand2);
+                return substraction;
+
             case "*":
-                CalculateMultiplication multiply = new CalculateMultiplication();
-                response = multiply.getCalculateValue(operand1, operand2);
-                break;
+                CalculateMultiplication calculateMultiplication = new CalculateMultiplication();
+                double multiplication = calculateMultiplication.getCalculateValue(operand1, operand2);
+                return multiplication;
+
             case "/":
-                CalculateDivision division = new CalculateDivision();
-                response = division.getCalculateValue(operand1, operand2);
-                break;
+                CalculateDivision calculateDivision = new CalculateDivision();
+                double division = calculateDivision.getCalculateValue(operand1, operand2);
+                return division;
+
             case "%":
-                CalculateModulus modulus = new CalculateModulus();
-                response = modulus.getCalculateValue(operand1, operand2);
-                break;
+                CalculateModulus calculateModulus = new CalculateModulus();
+                double modulus = calculateModulus.getCalculateValue(operand1, operand2);
+                return modulus;
+
         }
-        return  response;
+        return  0;
     }
 }
