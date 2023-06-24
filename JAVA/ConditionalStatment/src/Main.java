@@ -19,5 +19,26 @@ public class Main {
         System.out.println("--------------If Ladder Statement------------------------");
         IfLadderStatment ifLadderStatment=new IfLadderStatment();
         ifLadderStatment.ifLadder(40,30);
+
+        //-------------- Switch Byte Statement------------------------
+        System.out.println("------------- Switch Byte Statement------------------------");
+        SwitchByte switchByte=new SwitchByte();
+        switchByte.switchbyte((byte) 5);
+
+        //--------------Default  Switch  Statement------------------------
+        System.out.println("-------------Default Switch Statement------------------------");
+        SwitchDefault switchDefault=new SwitchDefault();
+        switchDefault.switchdefault( 2);
+
+        //-------------- Switch Default swapping Statement------------------------
+        System.out.println("-------------Switch Default swapping Statement------------------------");
+        SwitchDefaultSwapping switchDefaultSwapping=new SwitchDefaultSwapping();
+        //switchDefaultSwapping.switchSwapping(0);
+        switchDefaultSwapping.switchSwapping(6);
+
+        //-------------- Switch Double and float  Statement------------------------
+        System.out.println("-------------Switch Double and float   Statement------------------------");
+        SwitchDoubleAndFloat switchDoubleAndFloat=new SwitchDoubleAndFloat();
+        switchDoubleAndFloat.SwitchDoubleFloat(2);
     }
 }
