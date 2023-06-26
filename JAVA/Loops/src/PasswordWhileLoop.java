@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class PasswordWhileLoop {
-    public static void main(String[] args) {
+   public void passwordChecked() {
 
         Scanner scanner = new Scanner(System.in);
 
