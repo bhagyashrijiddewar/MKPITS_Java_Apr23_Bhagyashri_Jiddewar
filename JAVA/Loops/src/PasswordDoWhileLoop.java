@@ -12,16 +12,13 @@ public class PasswordDoWhileLoop {
         int userPassword= scanner.nextInt();
 
         do{
-            if(username=="abc" || userPassword==56){
+            if(username.equals("abc") && userPassword==56){
                 System.out.println("Login Successfully.");
-                break;
             }
-            else{
+            else if(username!="bcd" & userPassword!=23){
                 System.out.println("Incorrect username or password.");
-                break;
             }
-
-        }while (username!="bhagyshri" && userPassword!=23);
+            break;
+        }while (username!="" && userPassword!=0);
     }
-
 }
