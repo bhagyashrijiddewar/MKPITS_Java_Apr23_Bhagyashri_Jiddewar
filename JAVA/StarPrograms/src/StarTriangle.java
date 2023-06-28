@@ -8,8 +8,7 @@ public int starpattern(int number1){
                 System.out.print(" ");
             }
             for (int space = 0; space <= (row*2); space++) {
-//                System.out.print(" *");
-                if(space % 2 != 0){
+                if(space % 2 == 0){
                     System.out.print("*");
                 }else{
                     System.out.print(" ");

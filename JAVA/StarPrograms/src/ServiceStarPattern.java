@@ -1,33 +1,47 @@
 public class ServiceStarPattern {
 public int serviceStarPattern(int pattern,int number){
     switch (pattern){
-
-        case 3:
+        case 1:
+            System.out.println("==================Inverted Triangle===================== ");
             StarInvertedTriangle starInvertedTriangle=new StarInvertedTriangle();
-            int triangle1=starInvertedTriangle.starpattern(number);
-            return triangle1;
-        case 4:
-
-            MeargeStarRightAngle meargeStarRightAngle=new MeargeStarRightAngle();
-            int rightangle=meargeStarRightAngle.starpattern(number);
-            MeargeStarInvertedRightAngle meargeStarInvertedRightAngle =new MeargeStarInvertedRightAngle();
-            int mergeRightAngle= meargeStarInvertedRightAngle.starpattern(number);
+            starInvertedTriangle.starpattern(number);
             break;
-
-        case 5:
+        case 2:
+            MeargeStarRightAngle meargeStarRightAngle=new MeargeStarRightAngle();
+            meargeStarRightAngle.starpattern(number);
+            MeargeStarInvertedRightAngle meargeStarInvertedRightAngle =new MeargeStarInvertedRightAngle();
+            meargeStarInvertedRightAngle.starpattern(number);
+            break;
+        case 3:
             StarTriangle starTriangle=new StarTriangle();
-            int triangle= starTriangle.starpattern(number);
+            starTriangle.starpattern(number);
             StarInvertedTriangle starReverseTriangle=new StarInvertedTriangle();
-            int invertedTriangle=starReverseTriangle.starpattern(number);
+            starReverseTriangle.starpattern(number);
+            break;
+        case 4:
+            StarRightAngle RightAngle=new StarRightAngle();
+            RightAngle.starpattern(number);
+            break;
+        case 5:
+            StarReverseRightAngle starRightAngle=new StarReverseRightAngle();
+            starRightAngle.starpattern(number);
             break;
         case 6:
-            StarRightAngle RightAngle=new StarRightAngle();
-           int rightAngle= RightAngle.starpattern(number);
-           return rightAngle;
+            StarTriangle starTriangleSingle=new StarTriangle();
+            starTriangleSingle.starpattern(number);
+            break;
         case 7:
-            StarReverseRightAngle starRightAngle=new StarReverseRightAngle();
-            int reversRightAngle=starRightAngle.starpattern(number);
-            return reversRightAngle;
+            StarInvertedTriangle starReverseTriangleMerge=new StarInvertedTriangle();
+            starReverseTriangleMerge.starpattern(number);
+            StarTriangle starTriangleMerge=new StarTriangle();
+            starTriangleMerge.starpattern(number);
+            break;
+        case 8:
+            NumberDesign numberDesign=new NumberDesign();
+            numberDesign.starpattern(number);
+            NumberInvertedDesign numberInvertedDesign=new NumberInvertedDesign();
+            numberInvertedDesign.starpattern(number);
+
     }
     return 0;
 }
