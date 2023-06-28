@@ -29,15 +29,26 @@ public class Main {
         spaceStarReverseRightAngle.practiceProgram(number);
 
         //======================= 5 ===========================
-        System.out.println("=============== 5. Merge SpaceStarReverseRightAngle and SpaceStarRightAngle ===================");
+        System.out.println("=============== 5. Merge Space Star Reverse RightAngle and Space Star RightAngle ===================");
         SpaceStarRightAngle spaceStarRightAngle1=new SpaceStarRightAngle();
         spaceStarRightAngle1.practiceProgram(number);
         SpaceStarReverseRightAngle spaceStarReverseRightAngle1=new SpaceStarReverseRightAngle();
         spaceStarReverseRightAngle1.practiceProgram(number);
 
         //======================= 4 ===========================
-        System.out.println("=============== 4 ===================");
+        System.out.println("=============== 4. Star Triangle Pyramid ===================");
+        StarTrianglePyramid starTrianglePyramid=new StarTrianglePyramid();
+        starTrianglePyramid.practiceProgram(number);
 
+        //======================= 5 ===========================
+        System.out.println("=============== 5. Star Triangle Reverse Pyramid ===================");
+        StarTriangleReversePyramid starTriangleReversePyramid=new StarTriangleReversePyramid();
+        starTriangleReversePyramid.practiceProgram(number);
+
+        //======================= 6 ===========================
+        System.out.println("=============== 6. Star Line Design ===================");
+        StarLineDesign starLineDesign=new StarLineDesign();
+        starLineDesign.practiceProgram(number);
 
     }
 }
