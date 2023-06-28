@@ -1,5 +1,5 @@
 public class ServiceStarPattern {
-public int serviceStarPattern(int pattern,int number){
+public void serviceStarPattern(int pattern,int number){
     switch (pattern){
         case 1:
             System.out.println("==================Inverted Triangle===================== ");
@@ -43,6 +43,6 @@ public int serviceStarPattern(int pattern,int number){
             numberInvertedDesign.starpattern(number);
 
     }
-    return 0;
+
 }
 }
