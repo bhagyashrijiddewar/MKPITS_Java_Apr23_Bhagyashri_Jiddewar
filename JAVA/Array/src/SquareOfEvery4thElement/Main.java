@@ -7,7 +7,6 @@ package SquareOfEvery4thElement;
 
 import SquareOfEvery4thElement.ArrayMethodDeclaration;
 import SquareOfEvery4thElement.ArraySumOfSquareOf4thElement;
-
 public class Main {
     public static void main(String[] args) {
         //------Create an object "arraySumOfSquareOf4thElement" of class "ArraySumOfSquareOf4thElement" ----------
