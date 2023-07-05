@@ -5,10 +5,6 @@ import java.util.Scanner;
 public class Array2DProgram {
     public  void print2DArrayByUserInput (int inputRow,int inputColumn){
           Scanner scanner=new Scanner(System.in);
-//        System.out.println("Enter the row value = ");
-//        int inputRow=scanner.nextInt();
-//        System.out.println("Enter the column value = ");
-//        int inputColumn=scanner.nextInt();
 
         int[][] array=new int[inputRow][inputColumn];
         //input
