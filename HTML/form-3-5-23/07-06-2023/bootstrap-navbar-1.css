@@ -1,0 +1,13 @@
+.navbar{
+    background-color: aqua;
+}
+.navbar-collapse{
+    padding-left: 200px;
+    padding-right: 50px;
+}
+.nav-item {
+    padding-left: 80px;
+}
+/* .btn{
+    padding: 50px;
+} */

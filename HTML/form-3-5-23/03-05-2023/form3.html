@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>form-1</title>
+     <style>
+        table{
+            border: 1px solid black;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 50px;
+           margin-bottom: 50px;
+        }
+        h2{
+            text-align: center;
+        }
+        input[type=text]{
+            width: 80%;
+        }
+        input[type=tel]{
+            width: 80%;
+        }
+        button{
+            width: 20%;
+            padding: 10px 8px;
+            margin-left: 80px;
+            margin-top: auto;
+            font-size: 15px;
+        }
+
+     </style>
+    </head>
+    <body>
+        <form>
+            <table  cellpadding="10" cellspacing="2">
+             <tr>
+                <td>
+                    <h2>General Admission Registration Form</h2>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <label for="fullname">Name :</label>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <input type="text" id="fullname" placeholder="Enter the full name">
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <label for="mail">Email :</label>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <input type="text" id="mail" placeholder="Enter the email id">
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <label for="gen">Gender :</label>
+                </td>
+             </tr>
+             <tr>
+                <td>&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="gen" name="gender" >Male  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="gen" name="gender" >Female
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <label for="con">Contact :</label>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <input type="tel" id="con" placeholder="Enter contact number" >
+            
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <label for="lan">Language :</label>
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <input type="checkbox" id="lan"> English  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="lan"> Hindi  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" id="lan"> Marathi  
+                   
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <label for="pho">Photo :</label> &nbsp; 
+                    <input type="file" id="pho">
+            
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <label for="date">Admission Date :</label> &nbsp; 
+                    <input type="date" id="date">
+            
+                </td>
+             </tr>
+             <tr>
+                <td>
+                    <button>Submit</button>&nbsp; 
+                    <button>Reset</button>
+                </td>
+             </tr>
+            </table>
+        </form>
+    </body>
+</html>
+        

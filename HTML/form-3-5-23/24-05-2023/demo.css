@@ -1,0 +1,25 @@
+.head1{
+    /* =======by name====== */
+    /* color:red; */
+    /* ====by hex======= */
+    /* color:#ff0000 ; */
+    /* ====by rgb color====== */
+    /* color:rgb(180,120,90); */
+    color: hsla(259, 50%, 60%,0.5);
+    border:1px solid rgb(179, 0, 255);
+    /* background-color: antiquewhite; */
+    /* border: 2px solid black; */
+    
+}
+.head5{
+    color:rgb(255, 208, 0);
+}
+.head3{
+    color:rgb(58, 125, 226);
+}
+.head4{
+    color:rgba(58, 125, 226,0.5);
+}
+.head2{
+    color: hsl(259, 50%, 60%);
+}

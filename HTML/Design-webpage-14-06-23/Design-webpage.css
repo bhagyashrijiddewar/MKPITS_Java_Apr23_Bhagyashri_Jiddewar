@@ -1,0 +1,58 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    background: rgb(144,135,139);
+    background: radial-gradient(circle, rgba(144,135,139,1) 0%, rgba(184,189,174,1) 50%, rgba(221,238,207,1) 82%); 
+}
+
+.navbar-collapse{
+    padding-left: 180px;
+    padding-right: 40px;
+}
+.nav-item {
+    padding-left: 60px;
+}
+.navbar-brand img{
+    width: 100px;
+    height: 50;
+}
+.navbar-brand img:hover{
+    transform: scale(1.2); 
+}
+.carousel-item img{
+    width: 100%;
+    height: 600px;
+}
+.aboutus{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.container .row .col-6 img{
+    width: 500px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .row .col-6 img:hover{
+   transform: scale(1.2);
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.container .d-flex .card:hover{
+    transform: scale(1.1); 
+
+}
+.container .d-flex .m2:hover{
+    transform: none; 
+
+}
+
+

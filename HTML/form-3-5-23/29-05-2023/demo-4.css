@@ -1,0 +1,12 @@
+.p1{
+    width:500px;
+    height: 50px;
+    border: 1px solid black;
+    text-shadow: 2px 2px 3px red;
+}
+.p1:hover{
+    color: blue;
+    text-decoration: underline;
+    text-shadow: none;
+
+}

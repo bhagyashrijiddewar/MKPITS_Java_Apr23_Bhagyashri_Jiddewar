@@ -1,0 +1,13 @@
+
+.relative{
+    width: 100%;
+    border: 5px solid red;
+    background-color: rgb(198, 226, 43);
+    position: relative;
+}
+.absolute{
+    width: 100%;
+    border: 5px solid rgb(21, 0, 255);
+    background-color: rgb(140, 200, 222);
+    position: absolute;
+}

@@ -1,0 +1,27 @@
+.contain{
+    width: 800px;
+    height:800px;
+    border: 8px solid black;
+    margin:auto;
+    padding: 5px;
+}
+
+.row{
+    width: 800px;
+    height: 100px;
+    /* display: block; */
+
+}
+.pink{
+    width:100px ;
+    height: 100px;
+    background-color: pink;
+    float: left;
+
+}
+.black{
+    width:100px ;
+    height: 100px;
+    background-color: black;
+    float: left;
+}

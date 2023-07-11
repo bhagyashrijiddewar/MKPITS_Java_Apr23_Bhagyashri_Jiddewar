@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>form-6</title>
+      <style>
+        table{
+            border: 2px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            width: 50%;
+        }
+        h1{
+            text-align:center ;
+        }
+      </style>
+    </head>
+    <body>
+        <form action="" method="">
+            <table cellpadding="10" cellspacing="10">
+                <tr>
+                    <td> <h1>  Registration Form </h1> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fname">First Name :</label>
+                        <input type="text" id="fname" name="f-name" value="bhagyashri">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="gen">Gender : </label>
+                        <input type="radio" id="gen" name="gender"> Male
+                        <input type="radio" id="gen" name="gender"> Famale
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label type="gen1"> Marrital Status :</label>
+                        <input type="radio" id="gen1" name="gender1" readonly disabled> 
+                        <label for="gen1">Unmarried </label>
+                    </td>     
+                </tr>
+                <tr>
+                    <td>
+                        <label>Languages :</label>
+                        <input type="checkbox" id="lang" readonly disabled checked> C &nbsp;&nbsp;
+                        <input type="checkbox" id="lang" > C++ &nbsp;&nbsp;
+                        <input type="checkbox" id="lang" > JAVA  
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="con">COntact Number :</label>
+                        <input type="tel" id="con" > 
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="con">Department :</label>
+                        <input type="text" id="con" > 
+
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

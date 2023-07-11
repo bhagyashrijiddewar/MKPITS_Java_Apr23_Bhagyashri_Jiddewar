@@ -1,0 +1,38 @@
+ul{
+    background: rgb(238, 178, 178);
+    width: 100%;
+    list-style-type: none;
+    height: 100px;
+    
+}
+a{
+   
+    text-decoration: none; 
+    height: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+}
+a:link{
+    color: rgb(17, 1, 1);
+}
+a:visited{
+    color: rgb(255, 60, 0);
+}
+a:hover{
+    color:blue;
+}
+a:active{
+    color: aqua;
+}
+
+li{
+    display: inline-block;
+}
+
+img{
+ width: 80px;
+ height:40px;
+ padding-top: 30px;
+ margin-right: 500px;
+}

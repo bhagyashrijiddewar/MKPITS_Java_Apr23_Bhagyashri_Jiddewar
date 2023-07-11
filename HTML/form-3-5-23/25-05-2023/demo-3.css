@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(162, 244, 238);
+}
+div{
+    width:200px;
+    height:200px;
+    background-image: url("/image/peacock.jpg");
+    background-size: cover;
+    margin: 20px;
+    border: 10px solid black;
+
+}
+.img{
+    border-bottom-right-radius: 50px;
+}
+.img1{
+    border:20px;
+    border-radius: 0px 20px;
+    box-shadow: 5px 5px 10px 5px rgb(237, 48, 48); 
+
+}
+.img2{
+    border-color: rgb(23, 143, 229);
+    border-top-left-radius: 80%;
+}
+.img3{
+    border-radius: 60px 0px;
+
+}
+.img4{
+    border-radius:0px 0px 50px 50px ;
+}
+.img5{
+    border-radius: 50%;
+    border-color: rgb(66, 30, 227);
+}

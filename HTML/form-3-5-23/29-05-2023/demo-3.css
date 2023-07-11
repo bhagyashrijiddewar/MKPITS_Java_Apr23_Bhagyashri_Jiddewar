@@ -1,0 +1,26 @@
+.p1{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    /* 1. horizontal 2.Vertical 3.blur 4.spur */
+    box-shadow: 2px 2px 5px 3px red;
+}
+.p2{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px red;
+}
+.p3{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    box-shadow: 2px 2px  red;
+}
+.p4{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    /* SIngle value can not be acceptable. min 2 values required (horizontal and verical) */
+    box-shadow: 2px red;
+}

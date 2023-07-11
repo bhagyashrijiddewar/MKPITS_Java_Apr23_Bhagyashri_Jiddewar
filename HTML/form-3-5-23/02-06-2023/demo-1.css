@@ -1,0 +1,9 @@
+.fixed{
+    width: 100%;
+    border: 5px solid red;
+    background-color: blueviolet;
+    position: fixed;
+    top:0;
+    
+
+}

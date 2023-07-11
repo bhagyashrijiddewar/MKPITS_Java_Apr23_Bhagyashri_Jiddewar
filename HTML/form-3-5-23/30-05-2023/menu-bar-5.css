@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul{
+    background: rgb(178, 230, 122);
+    width: 100%;
+    list-style-type: none;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    
+}
+a{
+   
+    text-decoration: none;
+    height: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+}
+a:link{
+    color: rgb(57, 0, 228);
+}
+
+li:hover{
+    border-right:2px solid red;
+    text-decoration:underline red;
+    
+}
+
+li{
+    display: inline-block;
+}
+
+img{
+ width: 90px;
+ height:60px;
+ margin-right: 400px;
+ padding-left: 20px;
+}
