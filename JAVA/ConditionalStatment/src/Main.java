@@ -3,7 +3,7 @@ public class Main {
         //--------------If Else Statement------------------------
         System.out.println("--------------If Else Statement------------------------");
         IfElseStament ifElseStament=new IfElseStament();
-        ifElseStament.iflse(30,20,10);
+        ifElseStament.iflse(5,20,10);
 
         //-------------- Else If Statement------------------------
         System.out.println("-------------- Else if Statement------------------------");

@@ -14,35 +14,38 @@ class Address{
 }
 
 class Administration extends Hospital{
-   
-   
+   List<Staff> staff;
+   List<Fees> fees; 
+}
+class Fees{
+	int FirstVisitFees;
+	int SecondVisitFees;
+	int VisitFees;
+	double GST;
+}
+class Staff{
+	StaffType staffType;
+	String Gender;
+    int Age;		
+}
+class Doctors extends Staff{
+   String DoctorName;
+   Department deparment;
+   DoctorDesignation doctorDesignation; //intern,trainee,surgan,Specialist
+}
+class Cardiology extends Department{
+	List<FirstVisitFees> firstVisitFees;
+	
 }
 class Services extends Hospital{
    List<Package> packages;
    String Ambulance;
-   
-
-}
-class Facility extends Hospital{
-
-}
-class Doctors extends Hospital{
-   String DoctorName;
-   List<Department> deparment;
-   String Gender;
-   int Age;
-   List<DoctorDesignation> doctorDesignation ;
- 
-}
-
-class DoctorDesignation{
-
-
 }
 class Pataint extends Hospital{
- 
+ String pataientName;
+ String Gender;
+ int Age;
+ DeseaseType deseaseType;//heart,lungs,brain
 }
-class CriticalCare extends Hospital{
 
-}
 

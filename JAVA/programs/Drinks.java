@@ -40,6 +40,8 @@ class Tea extends SoftDrinks{
 	 List <TeaFlavour> teaFlavour; //green tea,black tea,normal tea
 }
 class TeaFlavour{
+	String TeaBrand;
+	
 	
 }
 class Coffee extends SoftDrinks{
@@ -49,4 +51,9 @@ class Coffee extends SoftDrinks{
 
 class HardDrinks extends Drinks{
 	
+	
+}
+class wine{
+	Double alcoholPercentage;
+	String 
 }

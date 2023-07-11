@@ -15,7 +15,6 @@ public class Main {
             ServiceStarPattern serviceStarPattern = new ServiceStarPattern();
             serviceStarPattern.serviceStarPattern(pattern, number);
             System.out.println("------------------------------------------------------------");
-
         }
     }
 }

@@ -27,5 +27,5 @@ String villaNo;
 List<Address> address;
 }
 /* */
-class 
+
 

@@ -10,7 +10,10 @@ public class PasswordWhileLoop {
         System.out.println("Enter the password :");
         int userPassword = scanner.nextInt();
 
-        while (username != null && userPassword != 0) {
+       System.out.println(username.hashCode());
+       System.out.println(userPassword.hashcode());
+
+       while (username != null && userPassword != 0) {
 
             if (username.equals("abc") && userPassword == 12345) {
                 System.out.println("Login successfully.");
