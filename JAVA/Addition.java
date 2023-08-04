@@ -22,4 +22,5 @@ public class Addition{
 	 
  System.out.println("Addition of 2-numbers :" +Sum);
  }
+ 
 } 
