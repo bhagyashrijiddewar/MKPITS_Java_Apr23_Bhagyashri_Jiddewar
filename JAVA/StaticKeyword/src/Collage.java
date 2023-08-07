@@ -51,7 +51,7 @@ public class Collage {
 //    }
 
 //    //7. If we want to initialize the value in the constructor it can not be initialize the value.
-//    //   if we want to initialize the value to the variable we can use the (Static block) .
+//    //   if we want to initialize the value to the variable we can use the (Static block).
 //    public Collage(){
 //        collageFees=500;
 //    }

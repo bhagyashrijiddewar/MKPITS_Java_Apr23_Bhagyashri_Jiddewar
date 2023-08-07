@@ -5,7 +5,6 @@ public class MainCalculator {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Calculate c;
         System.out.print("Enter 1st Number = ");
         int number1=scanner.nextInt();
 
