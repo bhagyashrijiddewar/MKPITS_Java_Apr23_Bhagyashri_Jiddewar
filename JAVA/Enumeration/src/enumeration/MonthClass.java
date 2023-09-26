@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class MonthClass {
     public static void displayDaysInMonths(){
         Scanner scanner=new Scanner(System.in);
-        enum months {January(31), February(28), March(31), April(30), May(31), June(30), July(31), Auguest(31), September(30), October(31), November(30), December(31);
+        enum  months {January(31), February(28), March(31), April(30), May(31), June(30), July(31), Auguest(31), September(30), October(31), November(30), December(31);
             final int days;
             months(int days) {
                 this.days=days;
