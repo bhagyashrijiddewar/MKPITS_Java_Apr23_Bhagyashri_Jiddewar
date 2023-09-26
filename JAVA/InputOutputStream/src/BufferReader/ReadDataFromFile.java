@@ -1,6 +1,7 @@
 package BufferReader;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class ReadDataFromFile {
     {
@@ -11,7 +12,6 @@ public class ReadDataFromFile {
                 System.out.println(string);
                 string= bufferedReader.readLine();
             }
-
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
@@ -19,5 +19,15 @@ public class ReadDataFromFile {
         }
     }
 
+    public void searchLongestWordMethod(String fileName) {
+        try {
+            Scanner scanner = new Scanner(new File(fileName));
+            while (scanner.hasNext()) {
+                System.out.println(scanner.next());    //---Print the word with the hele of .next() method.
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println(e);
+        }
 
+    }
 }

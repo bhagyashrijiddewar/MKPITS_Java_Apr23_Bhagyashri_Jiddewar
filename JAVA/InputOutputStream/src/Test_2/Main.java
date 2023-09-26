@@ -2,6 +2,7 @@ package Test_2;
 import java.io.*;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 
@@ -11,7 +12,7 @@ public class Main {
 
 //           WriteObjectReadObject.displayData();
 //        ----------------------------------------
-             WriteObjectReadObject.displayData();
+//             WriteObjectReadObject.displayData();
 
 
 //        ========================= Store data line by line (TextFileArrayLineByLine)===================================
@@ -30,7 +31,32 @@ public class Main {
 //         ReadFirstThreeLine.displayFirstThreeLine();
 
 //        ========================== Search longest word ================================================
+//------------------------------------------ (1) -----------------------------------------
+//           SearchLogestWord searchLogestWord=new SearchLogestWord();
+//           searchLogestWord.searchLongestWordMethod();
+//        ------------------------------------- (2) -------------------------------------------------
 
-//         SearchLogestWord.searchLongestWordMethod();
+//        SearchLogestWord searchLogestWord=new SearchLogestWord();
+//        searchLogestWord.searchLongestWordMethod();
+//        ---------------------------------------- (3) -------------------------------------------------
+
+//        Scanner scanner=new Scanner(System.in);
+//        System.out.println("Enter the file name : ");
+//        String fileName=scanner.next();
+//
+//        SearchLogestWord searchLogestWord=new SearchLogestWord();
+//        searchLogestWord.searchLongestWordMethod(fileName);
+//        ---------------------------------------- (4) -------------------------------------------------
+
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter the file name : ");
+        String fileName=scanner.next();
+
+        SearchLogestWord searchLogestWord=new SearchLogestWord();
+        searchLogestWord.searchLongestWordMethod(fileName);
+
+//           ========================== Find charactor, lines and words from the file ================================================
+
+//             FindCharLineWord.findNumberOfCharWordLines();
     }
 }

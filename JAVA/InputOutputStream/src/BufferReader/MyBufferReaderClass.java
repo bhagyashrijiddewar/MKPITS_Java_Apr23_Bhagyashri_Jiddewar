@@ -7,8 +7,8 @@ import java.io.InputStreamReader;
 
 public class MyBufferReaderClass {
     public static void displayData() throws IOException {
-        InputStreamReader inputStreamReader=new InputStreamReader(System.in);
-        BufferedReader bufferedReader=new BufferedReader(inputStreamReader);
+//        InputStreamReader inputStreamReader=new InputStreamReader(System.in);
+        BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the name :");
 
         String string=bufferedReader.readLine();

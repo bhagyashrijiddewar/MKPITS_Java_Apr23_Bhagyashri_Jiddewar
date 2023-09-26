@@ -14,7 +14,6 @@ public class ReadFirstThreeLine {
                     lineRead = bufferedReader.readLine();
                     System.out.println("First three lines : " + lineRead);
                 }
-
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {

@@ -19,7 +19,7 @@ public class FileObject {
 
         File file6 = new File(file2,"MyBufferReaderClass.java");
         File file5 = new File("D:\\JAVA\\InputOutputStream\\src\\BufferReader","MyBufferReaderClass.java");
-        System.out.println("Is Absolute ="+file5.isAbsolute());
+        System.out.println("Is Absolute ="+file5.length());
 
         System.out.println(file6.getAbsoluteFile());
         System.out.println(file5.getAbsolutePath());
@@ -42,6 +42,9 @@ public class FileObject {
         System.out.println("Compare the file ="+file5.compareTo(file7));
 //        System.out.println("Set last modified date ="+file5.setLastModified(Double.doubleToLongBits(18082023)));
         System.out.println("Get last modified date ="+file7.lastModified());
+        File file8 = new File("D:\\JAVA\\InputOutputStream\\src\\BufferReader","abc.java");
+
+        System.out.println("DAte converted into Date format : ");
 
 
 

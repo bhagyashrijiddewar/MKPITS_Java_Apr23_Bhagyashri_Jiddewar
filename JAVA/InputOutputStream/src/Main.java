@@ -1,23 +1,23 @@
-import BufferReader.AcceptFileName;
-import BufferReader.AcceptFileNameFromUser;
-import BufferReader.MyBufferReaderClass;
 import BufferReader.ReadDataFromFile;
-import BufferWriter.MyBufferWriter;
-import ReaderWriter.ReaderWriterClass;
-import ReaderWriter.Student;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
 //============================= Buffer Reader ===================================================
 
+        Scanner scanner=new Scanner(System.in);
 //        MyBufferReaderClass.displayData();
-//        ReadDataFromFile readDataFromFile=new ReadDataFromFile();
+        ReadDataFromFile readDataFromFile=new ReadDataFromFile();
+        System.out.println("-------------------------");
+        System.out.println("Enter the file name : ");
+        readDataFromFile.searchLongestWordMethod(scanner.next());
+//        =========================== BufferReader--> Accept File name =========================================
 
 //        AcceptFileNameFromUser acceptFileNameFromUser=new AcceptFileNameFromUser();
 
-//          AcceptFileName acceptFileName=new AcceptFileName();
+//        AcceptFileName acceptFileName=new AcceptFileName();
 //        AcceptFileName.displayData();
 
 //        =========================== Buffer Writer ======================================
@@ -64,6 +64,5 @@ public class Main {
 //            System.out.println(e);
 //        }
 
-        
     }
     }

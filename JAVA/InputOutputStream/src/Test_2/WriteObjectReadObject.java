@@ -6,7 +6,7 @@ public class WriteObjectReadObject {
 
 //        try {
 ////            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("nik123.txt", true)));
-//            BufferedWriter bufferedWriter =new BufferedWriter(new FileWriter("nik123.txt", true));
+//              BufferedWriter bufferedWriter =new BufferedWriter(new FileWriter("nik123.txt", true));
 //
 //            bufferedWriter.append("the text");
 //            bufferedWriter.close();

@@ -21,7 +21,6 @@ public class MyBufferWriter {
 //                throw new RuntimeException(e);
 //            }
 //    }
-
     BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(System.in));
     {
         try {

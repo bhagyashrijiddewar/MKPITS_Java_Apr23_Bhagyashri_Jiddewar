@@ -5,7 +5,8 @@ import java.io.*;
 public class AcceptFileName {
 
 //  public static void displayData()
-  { //By default { ----code over here--- },This means the default constructor bcoz FileReader constructor throws an error.
+  {     //By default { ----code over here--- },This means the default constructor bcoz FileReader constructor throws an error.
+
         BufferedReader bufferedReader1=new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter the name of the file :");
 
