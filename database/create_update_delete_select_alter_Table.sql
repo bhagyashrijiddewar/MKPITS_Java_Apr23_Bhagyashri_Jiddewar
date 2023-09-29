@@ -92,10 +92,34 @@ create table student_marks(roll_no char(4),
                            chemistry char(3),
                            math char(3));
 select* from student_marks
+create database Teacher
+use Teacher
+create table student_marks(emp_id char(4),
+                           Name varchar(30));
+CREATE TABLE Student_info (Roll_no CHAR(4) 
+                          ,Student_Name CHAR(12)
+                          ,Address CHAR(25)
+                          ,City CHAR(10)
+                          ,PRIMARY KEY(Roll_no));
+INSERT INTO student_info  VALUES('104','Shubham','Mohan Nagar','nagpur')
+							   ,('102','abhi','narendra Nagar','amaravati')
+                               ,('103','pranay','manish Nagar','nagpur')
+alter table student_marks add primary key (emp_id)
+select* from student_marks
+alter table student_marks add  email_id char(30)
+alter table student_marks add constraint fk_mail foreign key (email_id) references Student_info (Roll_no)
+select* from student_marks
+use sakila
+show tables
+select* from actor_info
+select* from actor
+insert into actor values(500,'bhagyashri','jiddewar',"2021-09-15" " 16:30:30")
+select film_info, last_update from actor left join actor_info on actor.actor_id=actor_info.actor_id
+select film_info, last_update from actor inner join actor_info on actor.actor_id=actor_info.actor_id
+select film_info, last_update from actor right join actor_info on actor.actor_id=actor_info.actor_id
 
 
-
-                                  
+                          
 
 
 
