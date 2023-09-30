@@ -6,10 +6,10 @@
    select* from rental 
    select*from inventory 
    select*from film 
-  select first_name,last_name from customer join rental on 
-  rental.customer_id=rental.customer_id join inventory on 
-  inventory.inventory_id=rental.inventory_id join film on 
-  film.film_id=inventory.film_id 
-  where customer.first_name>=5 and customer.last_name>=5
- 
    
+  select rental.customer_id, first_name,last_name, count(rental_id) as 'No. of Movies' 
+  from customer join rental on 
+  rental.customer_id=customer.customer_id group by customer_id
+  having count(rental_id)>=30
+ 
+
