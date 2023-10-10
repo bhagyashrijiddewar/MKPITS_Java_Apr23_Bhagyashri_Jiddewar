@@ -1,0 +1,11 @@
+que:-
+ anonimous block in not in the mysql, it is in the pl/sql which is oracle base .so it has a concept of anonimous block.
+Ans:-
+The error message doesn't match the code you posted. There is no dbms_output.put_line in your posted code and in MySQL. Also PL/SQL is Oracle specific. MySQL doesn't understand that. It's got it's own procedural extension. – 
+sticky bit
+ Sep 27, 2018 at 10:22
+in mysql you can only use begin..end blocks in stored programs (procedure,function,triggers,events) - – 
+P.Salmon
+ Sep 27, 2018 at 10:40
+2
+@VivekGupta . . . MySQL does not support PL/SQL. PL/SQL is the scripting language for the Oracle database, not for all database products owned by the Oracle company.
