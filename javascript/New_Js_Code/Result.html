@@ -8,12 +8,24 @@
     </script>
 </head>
 <body>
-    Marks : <input type="text" id="t1" onblur="validateValue(document.getElementById('t1').focus)">
+    Marks : <input type="text" id="t1" onblur="validateValue(document.getElementById('t1').value)">
    <button onclick="myfun()">submit</button>
-
+   <br>
    <button onclick="validate()">OK</button>
-
-   <button onclick="UserInput(document.getElementById('t1').value)">Button</button>
-    
+   <br>
+   <button onclick="UserInput(document.getElementById('t1').value)">Button1</button>
+   <br>
+   <input type="text" id="t2">
+   <button onclick="naturalNumber(100)" >button2</button>
+   <br>
+   <input type="text" id="t3">
+   <button onclick="naturalNumber(parseInt(document.getElementById('t3').value))" >button2</button>
+   <br>
+   <input type="text" id="t4">
+   <button onclick="primeNumber(document.getElementById('t4').value)">button3</button>
+   <br>
+   <input type="text" id="t5">
+   <button onclick="reverseString(document.getElementById('t5').value)">button4</button>
+   
 </body>
 </html>
