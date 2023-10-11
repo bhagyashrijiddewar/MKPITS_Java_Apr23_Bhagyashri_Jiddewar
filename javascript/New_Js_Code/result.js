@@ -77,4 +77,8 @@ function primeNumber(number){
     document.write(newString);
  }
 
+  //----** Reverse a String Using for Loop**----
+
+  
+
     
