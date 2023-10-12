@@ -1,6 +1,6 @@
 use sakila
  
- -- (5)  Actors in popular films: Show actors who have appeared in more than 10 films.
+ -- (1)  Actors in popular films: Show actors who have appeared in more than 10 films.
   
    select* from actor -- actor_id
    select* from film_actor -- actor_id,film_id
