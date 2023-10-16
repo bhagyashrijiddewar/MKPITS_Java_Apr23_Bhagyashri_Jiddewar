@@ -1,11 +1,23 @@
 
--- Problem Statement 1: 
--- Calculate Late Fees for Rental Design a stored procedure that calculates late fees for rentals based on the return date and the due date.
- -- The procedure should take the rental ID as input and update the late fee for the corresponding rental.
+-- Problem Statement 2: 
+-- Generate a Rental Receipt
+-- Create a stored procedure that generates a rental receipt for a given rental ID. 
+-- The receipt should include rental details, 
+-- customer information, and total cost. The procedure should output the receipt to the console.
 
 use sakila
-show tables
-select * from rental
-select * from customer
+select* from rental
+select* from payment 
 
-select customer_id,first_name,last_name,address
+Delimiter //
+create procedure generateReceipt(rentalid int)
+begin
+ select rental.rental_id,first_name,last_name,customer.customer_id,rental_date,return_date,sum(amount) as 'Total cost'
+ from rental join payment on payment.rental_id=rental.rental_id join
+ customer on customer.customer_id=payment.customer_id 
+ where rental.rental_id=rentalid;
+
+end //
+Delimiter ;
+
+call  generateReceipt(1);

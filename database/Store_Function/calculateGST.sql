@@ -3,22 +3,17 @@
 -- Develop a user-defined function that takes a person's birthdate as input and calculates their current age in years.
 
 select* from store
-drop function calculateAge
+drop function totalAmount
 
 DELIMITER //
 
-CREATE FUNCTION calculateAge(birthDate date) 
-RETURNS int 
+CREATE FUNCTION totalAmountWithGst(amt decimal(5,2)) 
+RETURNS decimal(5,2)
 DETERMINISTIC
 BEGIN
-    DECLARE age int;
- set age=datediff(current_Date(),birthDate)/365;
-   return age;
+    DECLARE gst int;
   
 END//
 DELIMITER ;
 
-select calculateAge('1993-04-17')
-
-
-
+select payment_id,Amount,totalAmountWithGst(amount) as GST,amount+totalAmountWithGst(amount) as Total from payment
