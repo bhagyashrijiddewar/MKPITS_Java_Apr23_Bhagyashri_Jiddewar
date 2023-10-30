@@ -20,6 +20,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -41,6 +42,7 @@ public class Account_registration extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+            
            String user_id= request.getParameter("user");
            String user_password= request.getParameter("password");
            String user_name= request.getParameter("name");
@@ -48,6 +50,9 @@ public class Account_registration extends HttpServlet {
            String user_City= request.getParameter("city");
            int user_Balance= Integer.parseInt(request.getParameter("balance"));
            
+            HttpSession httpSession= request.getSession(true);
+            httpSession.setAttribute("Balance", user_Balance);
+            
            Class.forName("com.mysql.cj.jdbc.Driver");
 //                 out.println("Driver loaded");
                 Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/bank","root","Anaisha160421");

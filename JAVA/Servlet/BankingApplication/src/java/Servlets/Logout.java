@@ -7,12 +7,6 @@ package Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +17,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Dell
  */
-public class Withdraw_Amount extends HttpServlet {
+public class Logout extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,51 +32,14 @@ public class Withdraw_Amount extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            request.getRequestDispatcher("MyPage.html").include(request, response);  
-
-            int amount=Integer.parseInt(request.getParameter("amount"));
-            HttpSession httpSession=request.getSession();
             
-            String user_id=httpSession.getAttribute("userid").toString();
-            
-            Date date=new java.sql.Date(httpSession.getCreationTime());
-            
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                out.println("Driver load..");
-           Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/bank","root","Anaisha160421");
-            out.println("Connection Establish.");
-            
-           PreparedStatement prepareStatement= connection.prepareStatement("Insert into transactions values(?,?,?,?)");
-           prepareStatement.setString(1, user_id);
-           prepareStatement.setDate(2, date);
-           prepareStatement.setInt(3, amount);
-           prepareStatement.setString(4, "Withdraw");
-           
-           int withdrawResult=prepareStatement.executeUpdate();
-           if(withdrawResult!=0){
-               out.println("Withdraw success.");
-           }else{
-               out.println("Unsuccess Withdraw.");
-           }
-           PreparedStatement preparedStatementUpdate = connection.prepareStatement("update account_Details set Balance=Balance-? where userid=? ");
-                preparedStatementUpdate.setInt(1, amount);
-                preparedStatementUpdate.setString(2,user_id);
-                 
-                int updateResult=preparedStatementUpdate.executeUpdate();
-                if(updateResult!=0){
-                    out.println("Successfully Update");
-                }else{
-                    out.println("Unsuccessfully update.");
-                }
-           
-            
-            } catch (Exception ex) {
-                out.println(ex);
-            }
-            
-            
-            
+           HttpSession httpSession= request.getSession(false);
+           httpSession.setAttribute("userid",null);
+           httpSession.invalidate();
+                   
+             out.println("Logout successfully");
+             request.getRequestDispatcher("index.html").include(request, response); 
+             out.close();
         }
     }
 

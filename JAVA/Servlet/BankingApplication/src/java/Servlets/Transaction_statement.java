@@ -7,11 +7,10 @@ package Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.lang.String;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -24,7 +23,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Dell
  */
-public class Deposit_Amount extends HttpServlet {
+public class Transaction_statement extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,47 +38,63 @@ public class Deposit_Amount extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-           request.getRequestDispatcher("MyPage.html").include(request, response);  
-
-           int amount= Integer.parseInt(request.getParameter("amount"));
-           
-                HttpSession httpSession=request.getSession(true);
+            HttpSession httpSession=request.getSession(true);
                 
            String userId=httpSession.getAttribute("userid").toString();
-                
-//           String userId=request.getParameter("SBI111");
-           
+//           int balance=Integer.parseInt(httpSession.getAttribute("Balance").toString());
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
 //                out.println("Driver loaded");
                 Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank","root","Anaisha160421");
 //                out.println("Establish Connection");
                 
-                PreparedStatement preparedStatement = connection.prepareStatement("insert into transactions values (?,?,?,?) ");
-                preparedStatement.setString(4, "Deposit");
-                preparedStatement.setInt(3, amount);
-                preparedStatement.setDate(2, Date.valueOf(java.time.LocalDate.now()));
-                preparedStatement.setString(1,userId);
-                int result=preparedStatement.executeUpdate();
-                if(result!=0){
-                    out.println("Deposit Successfully");
-                }else{
-                    out.println("Unsuccessfully deposit.");
-                }
-                PreparedStatement preparedStatementUpdate = connection.prepareStatement("update account_Details set Balance=Balance+? where userid=? ");
-                preparedStatementUpdate.setInt(1, amount);
-                preparedStatementUpdate.setString(2,userId);
-                 
-                int updateResult=preparedStatementUpdate.executeUpdate();
-                if(updateResult!=0){
-                    out.println("Successfully Update");
-                }else{
-                    out.println("Unsuccessfully update.");
-                }
+                 PreparedStatement preparedStatementUpdate = connection.prepareStatement("select * from transactions where user_id=? ");
+                 preparedStatementUpdate.setString(1,userId);
+                ResultSet resultSet= preparedStatementUpdate.executeQuery();
                 
-            } catch (Exception ex) {
-                out.println(ex);
+                   out.println("<!DOCTYPE html>");
+                   out.println("<html>");
+                   out.println("<head>");
+                   out.println("<title>Servlet DisplayStudentInfo</title>");            
+                   out.println("</head>");
+                   out.println("<body>");
+                   out.println("<center><h1>Student Details</h1></center>");
+                   out.println("<table border cellspacing=0 cellpadding=10 align=center>"
+                    + "<tr>"
+                    + "<th>User_id</th>"
+                    +"<th>Transaction_Date</th>"
+                    +"<th>Amount</th>"
+                    +"<th>Transaction_Type</th>"
+                    +"</tr>");
+            while (resultSet.next()){ 
+                
+                    out.println("<tr>"
+                    +"<td>"+resultSet.getString(1)+"</td>"
+                    +"<td>"+resultSet.getDate(2)+"</td>"
+                    +"<td>"+resultSet.getInt(3)+"</td>"
+                    +"<td>"+resultSet.getString(4)+"</td>"
+                    + "</tr>");
             }
+             out.println("</table>");
+             
+             PreparedStatement preparedStatement = connection.prepareStatement("select Balance from account_Details where userid=? ");
+             preparedStatement.setString(1,userId);
+             ResultSet resultSet1= preparedStatement.executeQuery();
+             if(resultSet1.next()){
+             out.println("<table border cellspacing=0 cellpadding=10 align=center>"
+                     +"<tr>"
+                     + "<th colspan=3>Balance = </th>"
+                     +"<th>"+resultSet1.getInt(1)+"</th>"
+                     +"</tr>"
+                     +"</table>");
+             }
+             out.println("</body>");
+             out.println("</html>");
+            
+            } catch (Exception ex) {
+               out.println(ex);
+            }
+
         }
     }
 

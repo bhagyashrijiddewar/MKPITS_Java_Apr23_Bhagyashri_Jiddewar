@@ -63,6 +63,7 @@ public class Account_Login extends HttpServlet {
                     HttpSession httpSession= request.getSession(true);
                     httpSession.setAttribute("userid", user_id);
                     
+                    
                      RequestDispatcher rd=request.getRequestDispatcher("MyPage.html");  
                      rd.forward(request,response);  
 
