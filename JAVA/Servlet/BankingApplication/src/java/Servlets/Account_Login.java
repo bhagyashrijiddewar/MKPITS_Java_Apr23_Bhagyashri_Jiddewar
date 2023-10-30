@@ -21,6 +21,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -48,9 +49,9 @@ public class Account_Login extends HttpServlet {
              password=request.getParameter("password");
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                 out.println("Driver loaded");
+//                 out.println("Driver loaded");
                 Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/bank","root","Anaisha160421");
-                out.println("Establish Connection");
+//                out.println("Establish Connection");
                 
                   PreparedStatement preparedStatement = connection.prepareStatement("select * from account_Details where userid=? and user_password=?");
                   preparedStatement.setString(1, user_id);
@@ -59,12 +60,15 @@ public class Account_Login extends HttpServlet {
                  
                  if(resultSet.next()){
 //                    out.println("Login Successfully");
+                    HttpSession httpSession= request.getSession(true);
+                    httpSession.setAttribute("userid", user_id);
+                    
                      RequestDispatcher rd=request.getRequestDispatcher("MyPage.html");  
                      rd.forward(request,response);  
 
                  }else{
                      out.println("Incorrect username and password");
-                     out.println("<a href='index.html'>Click Here");
+                     out.println("<a href='index.html'>Login Again");
                      out.println("</a>");
                  }
                   /* TODO output your page here. You may use following sample code. */

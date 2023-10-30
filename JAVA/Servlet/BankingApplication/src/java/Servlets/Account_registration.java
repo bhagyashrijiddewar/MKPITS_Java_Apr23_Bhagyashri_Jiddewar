@@ -49,9 +49,9 @@ public class Account_registration extends HttpServlet {
            int user_Balance= Integer.parseInt(request.getParameter("balance"));
            
            Class.forName("com.mysql.cj.jdbc.Driver");
-                 out.println("Driver loaded");
+//                 out.println("Driver loaded");
                 Connection connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/bank","root","Anaisha160421");
-                out.println("Establish Connection");
+//                out.println("Establish Connection");
                 
                 PreparedStatement preparedStatement = connection.prepareStatement("insert into account_Details values(?,?,?,?,?,?)");
             preparedStatement.setString(1, user_id);

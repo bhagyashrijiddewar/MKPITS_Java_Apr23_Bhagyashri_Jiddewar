@@ -7,10 +7,18 @@ package Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.lang.String;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -31,16 +39,49 @@ public class Deposit_Amount extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Deposit_Amount</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Deposit_Amount at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            
+           int amount= Integer.parseInt(request.getParameter("amount"));
+           
+                HttpSession httpSession=request.getSession(true);
+                
+           String userId=httpSession.getAttribute("userid").toString();
+                
+//           String userId=request.getParameter("SBI111");
+           
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+//                out.println("Driver loaded");
+                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank","root","Anaisha160421");
+//                out.println("Establish Connection");
+                
+                PreparedStatement preparedStatement = connection.prepareStatement("insert into transactions values (?,?,?,?) ");
+                preparedStatement.setString(4, "Deposit");
+                preparedStatement.setInt(3, amount);
+                preparedStatement.setDate(2, Date.valueOf(java.time.LocalDate.now()));
+                preparedStatement.setString(1,userId);
+                int result=preparedStatement.executeUpdate();
+                if(result!=0){
+                    out.println("Deposit Successfully");
+                }else{
+                    out.println("Unsuccessfully deposit.");
+                }
+                PreparedStatement preparedStatementUpdate = connection.prepareStatement("update account_Details set Balance=Balance+? where userid=? ");
+                preparedStatementUpdate.setInt(1, amount);
+                preparedStatementUpdate.setString(2,userId);
+                 
+                int updateResult=preparedStatementUpdate.executeUpdate();
+                if(updateResult!=0){
+                    out.println("Successfully Update");
+                }else{
+                    out.println("Unsuccessfully update.");
+                }
+                
+                
+
+                
+            } catch (Exception ex) {
+                out.println(ex);
+            }
         }
     }
 

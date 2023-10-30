@@ -3,16 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servlets;
+package SessionTracking;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +17,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author Dell
  */
-public class Withdraw_Amount extends HttpServlet {
+public class ServletMethod extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,39 +32,25 @@ public class Withdraw_Amount extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-           
-            int amount=Integer.parseInt(request.getParameter("amount"));
-            HttpSession httpSession=request.getSession();
-            String user_id=httpSession.getAttribute("userid").toString();
-            Date date=new java.sql.Date(httpSession.getCreationTime());
-            String transactionType="Withdraw";
-            
-            try {
-                Class.forName("com.mysql.cj.jdbc.Driver");
-                out.println("Driver load..");
-           Connection connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/bank","root","Anaisha160421");
-            out.println("Connection Establish.");
-            
-           PreparedStatement prepareStatement= connection.prepareStatement("Insert into account_Details values(?,?,?,?)");
-           prepareStatement.setString(1, user_id);
-           prepareStatement.setDate(2, date);
-           prepareStatement.setInt(3, amount);
-           prepareStatement.setString(4, transactionType);
-           
-           int withdrawResult=prepareStatement.executeUpdate();
-           if(withdrawResult!=0){
-               out.println("Withdraw success.");
-           }else{
-               out.println("Unsuccess Withdraw.");
-           }
-           
-           
-            
-            } catch (Exception ex) {
-                out.println(ex);
-            }
-            
-            
+            HttpSession httpSession= request.getSession();
+         out.println("Session id : "+httpSession.getId()+"<br>");
+         out.println("Is Session new : "+httpSession.isNew()+"<br>");
+         out.println("Get Class : "+httpSession.getClass()+"<br>");
+         out.println("Get Session context : "+httpSession.getSessionContext()+"<br>");
+         httpSession.setAttribute("1", "Bhagya");
+         out.println("<br>");
+         httpSession.putValue("2", "niks");
+         out.println("Get attribute name=1 & value=: "+httpSession.getAttribute("1")+"<br>");
+         out.println("Get value name=2 & value=: "+httpSession.getAttribute("1")+"<br>");
+         out.println("Current Date "+new java.sql.Date(httpSession.getCreationTime())+"<br>");
+         out.println("Get attribute names : "+httpSession.getAttributeNames());
+         out.println("Get last assess time : "+httpSession.getLastAccessedTime());
+         
+         java.util.Enumeration<java.lang.String> a=httpSession.getAttributeNames();
+         out.println("Get enumeration : "+a.nextElement());
+         
+         
+
             
         }
     }
