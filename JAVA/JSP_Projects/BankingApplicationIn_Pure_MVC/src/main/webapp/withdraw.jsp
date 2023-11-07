@@ -11,7 +11,7 @@
     <title>withdraw</title>
 </head>
 <body>
-<form action="Withdraw_JSP.jsp" method="post">
+<form action="controller/Withdraw_JSP.jsp" method="post">
   <table>
     <tr>
       <td><label>Withdraw Amount :</label></td>

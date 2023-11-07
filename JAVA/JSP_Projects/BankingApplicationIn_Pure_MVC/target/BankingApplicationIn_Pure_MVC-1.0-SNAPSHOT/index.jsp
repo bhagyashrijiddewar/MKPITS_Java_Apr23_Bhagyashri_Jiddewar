@@ -18,7 +18,7 @@
     </style>
 </head>
 <body>
-<form action="login.jsp" method="post">
+<form action="controller/login.jsp" method="post">
 <table class="container d-flex justify-content-center border borderless p-5 col-lg-4 table table-warning">
     <tr>
         <td align="center">
@@ -50,6 +50,12 @@
         <td class="text-center" colspan="2">
             <label>New User:</label>
             <a  href="registration.jsp">Click Here</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-center" colspan="2">
+            <label>Admin login:</label>
+            <a  href="Admin.jsp">Click Here</a>
         </td>
     </tr>
 </table>

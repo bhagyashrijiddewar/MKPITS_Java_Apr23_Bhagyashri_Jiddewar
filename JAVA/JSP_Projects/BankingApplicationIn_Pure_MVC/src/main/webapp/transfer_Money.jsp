@@ -1,21 +1,27 @@
 <%--
   Created by IntelliJ IDEA.
   User: Dell
-  Date: 04-11-2023
-  Time: 17:01
+  Date: 06-11-2023
+  Time: 10:45
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>deposit</title>
+    <title>transfer</title>
 </head>
 <body>
-<form action="controller/deposit_JSP.jsp" method="post">
+
+<form action="controller/transferMoney_JSP.jsp" method="post">
     <table>
+
         <tr>
-            <td><label>Deposit Amount :</label></td>
-            <td><input type="number" name="amount"></td>
+            <td><label> Account Number :</label></td>
+            <td><input type="text" name="accountNumber"></td>
+        </tr>
+        <tr>
+            <td><label> Amount :</label></td>
+            <td><input type="number" name="amountEnter"></td>
         </tr>
         <tr>
             <td>

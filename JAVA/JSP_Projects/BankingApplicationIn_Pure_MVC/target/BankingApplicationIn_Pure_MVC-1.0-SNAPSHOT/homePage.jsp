@@ -16,10 +16,10 @@
     <div class="row bg-primary">
              <h ><marqee>Welcome to State Bank Of India</marqee></h>
     </div>
-    <a href="deposit.jsp">Deposit</a><br>
-    <a href="withdraw.jsp">Withdraw</a><br>
-    <a href="transaction_Statement.jsp">Transaction Statement</a><br>
-    <a href="transfer.jsp">Transfer</a>
+    <a href="../deposit.jsp">Deposit</a><br>
+    <a href="../withdraw.jsp">Withdraw</a><br>
+    <a href="transaction_Statement_JSP.jsp">Transaction Statement</a><br>
+    <a href="../transfer_Money.jsp">Transfer</a>
 </div>
 </form>
 </body>

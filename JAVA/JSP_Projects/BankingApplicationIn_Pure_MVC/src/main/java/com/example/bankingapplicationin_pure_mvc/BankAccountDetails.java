@@ -1,5 +1,7 @@
 package com.example.bankingapplicationin_pure_mvc;
 
+import java.sql.Timestamp;
+
 public class BankAccountDetails {
     private String userid;
     private String password;
@@ -7,6 +9,9 @@ public class BankAccountDetails {
     private String address;
     private String city;
     private int balance;
+    private Timestamp creationOn;
+    private Timestamp approvedAt;
+    private String approvedBy;
 
     public BankAccountDetails() {
     }
@@ -56,5 +61,29 @@ public class BankAccountDetails {
 
     public void setBalance(int balance) {
         this.balance = balance;
+    }
+
+    public Timestamp getCreationOn() {
+        return creationOn;
+    }
+
+    public void setCreationOn(Timestamp creationOn) {
+        this.creationOn = creationOn;
+    }
+
+    public Timestamp getApprovedAt() {
+        return approvedAt;
+    }
+
+    public void setApprovedAt(Timestamp approvedAt) {
+        this.approvedAt = approvedAt;
+    }
+
+    public String getApprovedBy() {
+        return approvedBy;
+    }
+
+    public void setApprovedBy(String approvedBy) {
+        this.approvedBy = approvedBy;
     }
 }

@@ -11,7 +11,7 @@
     <title>deposit</title>
 </head>
 <body>
-<form action="deposit_JSP.jsp" method="post">
+<form action="controller/deposit_JSP.jsp" method="post">
     <table>
         <tr>
             <td><label>Deposit Amount :</label></td>

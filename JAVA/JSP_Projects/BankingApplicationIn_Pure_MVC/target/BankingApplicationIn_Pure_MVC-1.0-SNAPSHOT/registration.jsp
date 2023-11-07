@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-<form action="registerJsp.jsp" method="post">
+<form action="controller/registerJsp.jsp" method="post">
     <table class="container d-flex justify-content-center border borderless p-5 col-lg-4 table table-warning">
     <tr>
         <td>
