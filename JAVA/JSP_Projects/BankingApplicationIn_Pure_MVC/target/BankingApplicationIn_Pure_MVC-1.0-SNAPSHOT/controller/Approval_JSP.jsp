@@ -11,7 +11,6 @@
 <%
     Services services=new Services();
     if(services.isApprovalByAdmin(bank,uId)!=0){
-//        out.println("Successfully approved.");
         response.sendRedirect("admin_JSP.jsp");
 
     }else {

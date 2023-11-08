@@ -38,7 +38,9 @@
             <label>Password</label>
         </td>
         <td>
-            <input type="password" class="form-control" name="password">
+            <input type="password" class="form-control" name="password"><br>
+            <a href="forgotPassword.jsp" class="btn btn-link"> Forgot Your Password? </a>
+
         </td>
     </tr>
     <tr>

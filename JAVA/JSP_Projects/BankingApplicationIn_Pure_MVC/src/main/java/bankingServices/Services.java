@@ -2,6 +2,7 @@ package bankingServices;
 
 import com.example.bankingapplicationin_pure_mvc.AdminLogin;
 import com.example.bankingapplicationin_pure_mvc.BankAccountDetails;
+import com.example.bankingapplicationin_pure_mvc.TotalLogs;
 import com.example.bankingapplicationin_pure_mvc.TransferMoneyEntity;
 
 import java.sql.*;
@@ -218,6 +219,19 @@ public class Services {
         }
         return result;
 
+    }
+
+    public int logRecord(TotalLogs totalLogs){
+        try{
+           PreparedStatement preparedStatement= connection.prepareStatement("insert into log_details values(?,?,?)");
+           preparedStatement.setTimestamp(1,totalLogs.getLogTime());
+           preparedStatement.setString(2,totalLogs.getTaskDone());
+           preparedStatement.setString(3,totalLogs.getUserId());
+         result=  preparedStatement.executeUpdate();
+        }catch(Exception e){
+            out.println(e);
+        }
+        return  result;
     }
 
 

@@ -11,8 +11,6 @@ public class TransferMoneyEntity {
     public TransferMoneyEntity() {
     }
 
-
-
     public String getUser_id() {
         return user_id;
     }
