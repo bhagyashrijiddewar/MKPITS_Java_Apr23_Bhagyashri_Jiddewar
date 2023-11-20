@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<beans 
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+    <bean id="emp" class="employee.EmployeeClass" autowire="byName" >
+        
+        <!-- ****** By using constructor injection*******  -->
+        <constructor-arg value="101"></constructor-arg>
+        <constructor-arg value="pranay"></constructor-arg>
+        <!-- Reference to address  -->
+<!--        <constructor-arg>
+            <ref bean="add"></ref>
+        </constructor-arg>-->
+        
+        <!-- ******** By using Setter injection by using property tag and value attribute****** -->
+<!--        <property name="id" value="102"></property>
+        <property name="name" value="shubham"></property>-->
+        
+        
+        <!-- *********By using Setter injection by using property tag and value tag******* -->
+        
+<!--    <property name="id">
+            <value>103</value>
+        </property>
+        <property name="name">
+            <value>Abhishek</value>
+        </property>--> 
+    </bean>
+    <bean id="address" class="employee.Address" >
+        <constructor-arg value="Nagpur"></constructor-arg>
+        <constructor-arg value="Maharashtra"></constructor-arg>
+        <constructor-arg value="India"></constructor-arg>
+    </bean>
+</beans>
