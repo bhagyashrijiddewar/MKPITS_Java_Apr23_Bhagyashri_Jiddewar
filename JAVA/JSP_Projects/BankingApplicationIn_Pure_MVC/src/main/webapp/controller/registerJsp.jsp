@@ -26,7 +26,7 @@
        services.logRecord(log);
 
    }else{
-       out.println("Failed to insert record. ");
+       out.println("This record already present. ");
    }
  %>
 

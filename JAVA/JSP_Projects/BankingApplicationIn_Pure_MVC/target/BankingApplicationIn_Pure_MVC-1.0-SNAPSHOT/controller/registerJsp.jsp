@@ -11,7 +11,6 @@
 <jsp:setProperty name="bank" property="city" param="city"/>
 <jsp:setProperty name="bank" property="balance" param="balance"/>
 <jsp:setProperty name="bank" property="creationOn" value='<%= new java.sql.Timestamp(session.getCreationTime())%>'/>
-
 <%
     session.setAttribute("logDate",bank.getCreationOn());
     session.setAttribute("userId",bank.getUserid());
@@ -27,7 +26,7 @@
        services.logRecord(log);
 
    }else{
-       out.println("Failed to insert record. ");
+       out.println("This record already present. ");
    }
  %>
 
