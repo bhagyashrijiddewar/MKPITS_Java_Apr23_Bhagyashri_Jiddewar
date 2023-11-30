@@ -6,6 +6,8 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class StudentDAOImplimentation implements StudentDAO{
     private EntityManager entityManager;
@@ -23,6 +25,14 @@ public class StudentDAOImplimentation implements StudentDAO{
     public Student findByRollNo(Integer rollNo) {
         return entityManager.find(Student.class,rollNo);
     }
+
+    @Override
+    public List<Student> findAllStudent(Student student) {
+
+
+        return null;
+    }
+
     @Override
     @Transactional
     public void deleteRecord(Integer rollno) {

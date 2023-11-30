@@ -20,7 +20,7 @@ public class NewSpringBootApplication {
 			System.out.println("Command Line Runner");
 //			createStudent(studentDAO);
 //			findStudent(studentDAO);
-//			deleteStudentRecord(studentDAO);
+//			deleteStudentRecord(studentDAO);--------------------------
 			updateRecord(studentDAO);
 		};
 	}

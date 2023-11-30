@@ -1,0 +1,11 @@
+package com.example.StudentMangement.services;
+
+import com.example.StudentMangement.entity.Student;
+
+import java.util.List;
+
+public interface StudentService {
+    List<Student> findAllStudentList();
+    Student findStudent(Integer roll_no);
+
+}
