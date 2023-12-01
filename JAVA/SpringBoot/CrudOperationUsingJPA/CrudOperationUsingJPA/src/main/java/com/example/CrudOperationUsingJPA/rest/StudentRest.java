@@ -1,12 +1,9 @@
-package com.example.StudentMangement.rest;
+package com.example.CrudOperationUsingJPA.rest;
 
-import com.example.StudentMangement.entity.Student;
-import com.example.StudentMangement.services.StudentService;
+import com.example.CrudOperationUsingJPA.entity.Student;
+import com.example.CrudOperationUsingJPA.services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-
 @RestController
 @RequestMapping("/api")
 public class StudentRest {
@@ -15,15 +12,6 @@ public class StudentRest {
     @Autowired
     public StudentRest(StudentService studentService) {
         this.studentService = studentService;
-    }
-
-    @GetMapping("/students")
-    public List<Student> displayStudentList(){
-        return studentService.findAllStudentList();
-    }
-    @GetMapping("/students/{roll_no}")
-    public Student displayStudent(@PathVariable Integer roll_no){
-        return studentService.findStudent(roll_no);
     }
     @PostMapping("/students")
     public String insertStudentRecord(@RequestBody Student student){
