@@ -8,7 +8,7 @@ public interface StudentService {
     List<Student> findAllStudentList();
     Student findStudent(Integer roll_no);
     String insertData(Student student);
-    Student updateRecord(Student student,Integer roll_no);
+    String updateRecord(Student student);
     String deleteStudentRecord(Integer roll_no);
 
 

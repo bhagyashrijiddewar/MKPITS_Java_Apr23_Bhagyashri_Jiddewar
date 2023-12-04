@@ -29,10 +29,14 @@ public class StudentRest {
     public String insertStudentRecord(@RequestBody Student student){
         return studentService.insertData(student);
     }
-    @PutMapping("/students/{roll_no}")
-    public Student updateStudentRecord(@RequestBody Student student, @PathVariable Integer roll_no){
-        return studentService.updateRecord(student,roll_no);
-    }
+//    @PutMapping("/students/{roll_no}")
+//    public Student updateStudentRecord(@RequestBody Student student, @PathVariable Integer roll_no){
+//        return studentService.updateRecord(student,roll_no);
+//    }
+    @PutMapping("/students")
+    public String updateStudentRecord(@RequestBody Student student){
+    return studentService.updateRecord(student);
+}
     @DeleteMapping("/students/{roll_no}")
     public String deleteStudentRecord(@RequestBody @PathVariable Integer roll_no){
         return studentService.deleteStudentRecord(roll_no);
