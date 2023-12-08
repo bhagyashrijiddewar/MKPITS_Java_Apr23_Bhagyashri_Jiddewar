@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homepage</title>
+</head>
+<body>
+<form >
+    <a th:href="@{/students/register}">Add</a>
+    <table>
+        <tr>
+            <th>Roll No  </th>
+            <th>Name </th>
+            <th>Address </th>
+            <th>City </th>
+        </tr>
+        <tr th:each="count:${studentList}">
+            <td th:text="${count.rollNo}"></td>
+            <td th:text="${count.name}"></td>
+            <td th:text="${count.address}"></td>
+            <td th:text="${count.city}"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
