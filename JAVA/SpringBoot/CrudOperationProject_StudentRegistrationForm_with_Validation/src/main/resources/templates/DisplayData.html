@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Roll No : </td>
+        <td><p th:text="${student.rollNo}"/></td>
+    </tr>
+    <tr>
+        <td>Name : </td>
+        <td> <p th:text="${student.name}"/></td>
+    </tr>
+    <tr>
+        <td>Address : </td>
+        <td> <p th:text="${student.address}"/></td>
+    </tr>
+    <tr>
+        <td>City : </td>
+        <td> <p th:text="${student.city}"/></td>
+    </tr>
+</table>
+</body>
+</html>
