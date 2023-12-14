@@ -1,6 +1,6 @@
 package com.example.StudentMangement.services;
 
-import com.example.StudentMangement.dao.StudentDao;
+import com.example.StudentMangement.repository.StudentDao;
 import com.example.StudentMangement.entity.Student;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
